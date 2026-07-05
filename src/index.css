@@ -1,6 +1,69 @@
 @import "tailwindcss";
 
-:root {
+@theme {
+  /* Primary Color Palette */
+  --color-primary-1: #e6eef3;
+  --color-primary-2: #ccdde7;
+  --color-primary-3: #99bbd0;
+  --color-primary-4: #6699b8;
+  --color-primary-5: #3377a1;
+  --color-primary-6: #005580;
+  --color-primary-7: #00466a;
+  --color-primary-8: #003754;
+  --color-primary-9: #002844;
+  --color-primary-10: #001a2e;
+
+  /* Box Shadow */
+  --shadow-custom: 0 0rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.wrap-text-to-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.wrap-text-to-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.wrap-text-to-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.wrap-text-to-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px !important;
+  background-color: var(--color-primary-6) !important;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5) !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
   margin: 0;
-  padding: 0;
 }
