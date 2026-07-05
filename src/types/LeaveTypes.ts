@@ -1,6 +1,6 @@
 export type LeaveType = {
   id?: string;
-  adminId?: string;
+  admin_id?: string;
   name: string;
   date: string;
 };

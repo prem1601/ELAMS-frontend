@@ -1,6 +1,6 @@
 export type DepartmentType = {
   id?: string;
-  adminId?: string;
+  admin_id?: string;
   name: string;
 };
 
