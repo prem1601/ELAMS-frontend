@@ -7,7 +7,7 @@ const HeaderWrapper = ({ children }: ReactNodeProps) => {
     <div>
       <Header />
       <div className="px-3 py-2">
-        <div className="border-2 border-gray-300 rounded-md bg-white px-2 py-1 min-h-[88vh] min-h-screen">
+        <div className="border-2 border-gray-300 rounded-md bg-white px-2 py-1 min-h-[88vh]">
           <main>{children}</main>
         </div>
       </div>

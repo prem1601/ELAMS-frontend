@@ -14,12 +14,10 @@ import AddEditDepartment from "@/components/AddEditDepartment";
 const Leave = () => {
   const [leaves, setLeaves] = useState<LeaveType[]>([]);
 
-  const [selectedLeave, setSelectedLeave] = useState<
-    LeaveType | boolean
-  >(false);
-  const [deleteLeave, setDeleteLeave] = useState<LeaveType | false>(
+  const [selectedLeave, setSelectedLeave] = useState<LeaveType | boolean>(
     false,
   );
+  const [deleteLeave, setDeleteLeave] = useState<LeaveType | false>(false);
 
   useEffect(() => {
     const fetchLeaves = async () => {
@@ -40,7 +38,7 @@ const Leave = () => {
     <>
       {/* -------------------------------- Header ------------------------------------ */}
       <div className="border-b-2 border-gray-300 flex items-center justify-between pb-2">
-        <h1 className="text-2xl font-bold">Departments</h1>
+        <h1 className="text-2xl font-bold">Leaves</h1>
         <PrimaryNormalButton
           title="+ Add Leave"
           onClick={() => setSelectedLeave(true)}
@@ -81,12 +79,8 @@ const Leave = () => {
                   })}
                   <td className="py-1">
                     <div className=" flex items-center justify-center gap-3">
-                      <CustomEditIcon
-                        onClick={() => setSelectedLeave(user)}
-                      />
-                      <CustomDeleteIcon
-                        onClick={() => setDeleteLeave(user)}
-                      />
+                      <CustomEditIcon onClick={() => setSelectedLeave(user)} />
+                      <CustomDeleteIcon onClick={() => setDeleteLeave(user)} />
                     </div>
                   </td>
                 </tr>
